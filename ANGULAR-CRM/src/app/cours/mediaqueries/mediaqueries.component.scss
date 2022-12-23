@@ -1,0 +1,23 @@
+// css pour tous les devices
+p {
+  width: 100%;
+  min-height: 100px;
+  background: blue;
+}
+// media query pour tous les devices supérieurs ou egaux aux tablettes
+
+@media screen and (min-width: 768px) {
+  p {
+    width: 50%;
+    background: pink;
+  }
+}
+
+// media query pour tous les devices supérieurs ou egaux aux desktop (1024px)
+
+@media (min-width: 1024px) {
+  p {
+    width: 25%;
+    background: orange;
+  }
+}

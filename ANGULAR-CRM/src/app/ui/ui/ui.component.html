@@ -1,0 +1,26 @@
+<header class="fixed-top">
+  <!-- projeter une instance de app header -->
+  <ng-content select=".tr-header"></ng-content>
+  <span (click)="toggle()">
+    <ng-content select=".tr-btn"></ng-content>
+  </span>
+</header>
+<main class="d-flex">
+  <nav [ngClass]="{'close-nav': !open}">
+    <!-- transclusion pour le nav -->
+    <ng-content select=".tr-nav"></ng-content>
+  </nav>
+
+  <div class="shadow" *ngIf="open" (click)="toggle()"></div>
+
+  <div class="content  d-flex flex-column flex-grow-1">
+    <div class="post flex-grow-1">
+      <p>un post</p>
+
+    </div>
+    <div class="form">
+      <!-- transclusion pour le footer -->
+      <ng-content select=".tr-footer"></ng-content>
+    </div>
+  </div>
+</main>
