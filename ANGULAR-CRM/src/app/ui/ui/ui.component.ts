@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-ui',
@@ -6,10 +6,13 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./ui.component.scss'],
 })
 export class UiComponent {
-  // Si pas de valeur par défaut = open!: boolean;
-  public open: boolean = true;
+  public close: boolean;
+
+  constructor() {
+    this.close = false;
+  }
 
   public toggle() {
-    this.open = !this.open;
+    this.close = !this.close;
   }
 }

@@ -1,11 +1,19 @@
-header {
-  height: 80px;
+.ui {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.top {
-  height: 100vh;
+.close-aside {
+  height: 0px;
+  overflow: hidden;
 }
 
-footer {
-  height: 100px;
+nav {
+  background: var(--app-darklight2);
+}
+
+main {
+  flex-grow: 1;
+  background: var(--app-darklight);
 }
