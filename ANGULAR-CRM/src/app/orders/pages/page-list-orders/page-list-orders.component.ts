@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Order } from 'src/app/core/models/order';
 import { OrdersService } from 'src/app/core/services/orders.service';
 
@@ -9,22 +10,19 @@ import { OrdersService } from 'src/app/core/services/orders.service';
 })
 export class PageListOrdersComponent {
   public headers: string[];
-  public collection!: Order[];
+  public collection$: Observable<Order[]>;
 
   constructor(private service: OrdersService){
+    this.collection$ = this.service.collection$;
     this.headers = [
       'Type',
       'Client',
       'Jours',
       'Tjm',
-      'total HT',
+      'Total HT',
       'Total TTC',
       'Status',
     ];
 
-    this.service.collection$.subscribe((data) => {
-      this.collection = data;
-      console.log(data);
-    });
   }
 }

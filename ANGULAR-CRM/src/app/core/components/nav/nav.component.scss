@@ -1,7 +1,8 @@
 .nav-link {
-  color: var(--app-light)
+  color: var(--app-light);
 }
-.nav-link:hover, .nav-link.active {
-  color: var(--app-primary)
+.nav-link:hover, .nav-link.active{
+  color: var(--app-primary);
+  background-color: var(--app-darklight2);
 }
 
