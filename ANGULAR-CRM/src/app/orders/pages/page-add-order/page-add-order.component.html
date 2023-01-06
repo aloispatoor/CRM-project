@@ -1,1 +1,42 @@
-<app-template-full-width title="Add Order"></app-template-full-width>
+<app-template-container title="Ajouter une commande">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="prestaType">Type</label>
+      <input type="text" class="form-control" id="prestaType" formControlName="prestaType">
+    </div>
+
+    <div class="form-group">
+      <label for="client">Client</label>
+      <input type="text" class="form-control" id="client" formControlName="client">
+    </div>
+
+    <div class="form-group">
+      <label for="nbDays">Jours</label>
+      <input type="number" class="form-control" id="nbDays" formControlName="nbDays">
+    </div>
+
+    <div class="form-group">
+      <label for="unitPrice">Prix HT</label>
+      <input type="number" class="form-control" id="unitPrice" formControlName="unitPrice">
+    </div>
+
+    <div class="form-group">
+      <label for="vat">Tva</label>
+      <input type="number" class="form-control" id="vat" formControlName="vat">
+    </div>
+
+    <div class="form-group">
+      <label for="state">Statut</label>
+      <select class="form-control form-select" id="state" formControlName="state">
+        <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Commentaire</label>
+      <textarea class="form-control" id="comment" formControlName="comment"></textarea>
+    </div>
+
+    <app-btn type="submit" label="Submit"></app-btn>
+  </form>
+</app-template-container>

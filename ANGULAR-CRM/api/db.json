@@ -4,7 +4,7 @@
       "unitPrice": 1200,
       "nbDays": 20,
       "vat": 20,
-      "state": "OPTION",
+      "state": "CONFIRMED",
       "prestaType": "formation",
       "client": "Capgemini2",
       "comment": "Merci Cap pour les 24k",
@@ -49,9 +49,18 @@
       "client": "Modis",
       "comment": "Merci Modis pour les 10k",
       "id": 5
+    },
+    {
+      "prestaType": "Formation",
+      "client": "Atos",
+      "nbDays": 5,
+      "unitPrice": 500,
+      "vat": 20,
+      "state": "OPTION",
+      "comment": "Test",
+      "id": 6
     }
   ],
-
   "clients": [
     {
       "state": "INACTIVE",

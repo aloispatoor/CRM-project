@@ -7,7 +7,12 @@
       <td>{{ order.unitPrice }}</td>
       <td>{{ order.nbDays | total: order.unitPrice | currency }}</td>
       <td>{{ order.nbDays | total: order.unitPrice : order.vat | currency }}</td>
-      <td>{{ order.state }}</td>
+      <td [appState]="order.state">
+        <select (change)="changeState(order, $event)">
+          <option [value]="state" *ngFor="let state of states" [selected]="state === order.state">{{ state }}</option>
+        </select>
+      </td>
     </tr>
   </app-table-light>
+  <app-btn label="Add Order" route="add"></app-btn>
 </app-template-full-width>
