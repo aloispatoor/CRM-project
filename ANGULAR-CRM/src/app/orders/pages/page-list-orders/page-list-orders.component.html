@@ -1,6 +1,10 @@
 <app-template-full-width title="Commandes" *ngIf="collection$ | async as collection">
   <app-table-light [headers]="this.headers">
     <tr *ngFor="let order of collection">
+      <td>
+        <app-icon-edit (click)="goToEdit(order.id)"></app-icon-edit>
+        <app-icon-delete></app-icon-delete>
+      </td>
       <td>{{ order.prestaType }}</td>
       <td>{{ order.client }}</td>
       <td>{{ order.nbDays }}</td>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { StateOrder } from 'src/app/core/enums/state-order';
 import { Order } from 'src/app/core/models/order';
@@ -14,9 +15,10 @@ export class PageListOrdersComponent {
   public collection$: Observable<Order[]>;
   public states = Object.values(StateOrder);
 
-  constructor(private service: OrdersService){
+  constructor(private service: OrdersService, private router: Router){
     this.collection$ = this.service.collection$;
     this.headers = [
+      'Actions',
       'Type',
       'Client',
       'Jours',
@@ -33,5 +35,9 @@ export class PageListOrdersComponent {
     this.service.changeState(order, state).subscribe((data) => {
       Object.assign(order, data);
     });
+  }
+
+  public goToEdit(id: number){
+    this.router.navigate(['orders', 'edit', id]);
   }
 }
