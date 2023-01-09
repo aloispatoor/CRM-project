@@ -63,12 +63,12 @@
     {
       "id": 7,
       "prestaType": "test",
-      "client": "test",
+      "client": "test update 3",
       "nbDays": 5,
       "unitPrice": 500,
       "vat": 20,
       "state": "CANCELED",
-      "comment": "test"
+      "comment": "test update"
     }
   ],
   "clients": [
