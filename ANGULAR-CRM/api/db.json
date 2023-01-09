@@ -1,14 +1,14 @@
 {
   "orders": [
     {
-      "unitPrice": 1200,
+      "id": 1,
+      "prestaType": "formation",
+      "client": "Capgemini3",
       "nbDays": 20,
+      "unitPrice": 1200,
       "vat": 20,
       "state": "CONFIRMED",
-      "prestaType": "formation",
-      "client": "Capgemini2",
-      "comment": "Merci Cap pour les 24k",
-      "id": 1
+      "comment": "Merci Cap pour les 24k"
     },
     {
       "unitPrice": 1200,
@@ -59,16 +59,6 @@
       "state": "OPTION",
       "comment": "Test",
       "id": 6
-    },
-    {
-      "id": 7,
-      "prestaType": "test",
-      "client": "test update 3",
-      "nbDays": 5,
-      "unitPrice": 500,
-      "vat": 20,
-      "state": "CANCELED",
-      "comment": "test update"
     }
   ],
   "clients": [

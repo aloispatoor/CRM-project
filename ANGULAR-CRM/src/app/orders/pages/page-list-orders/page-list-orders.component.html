@@ -3,7 +3,7 @@
     <tr *ngFor="let order of collection">
       <td>
         <app-icon-edit (click)="goToEdit(order.id)"></app-icon-edit>
-        <app-icon-delete></app-icon-delete>
+        <app-icon-delete (click)="deleteOrder(order.id)"></app-icon-delete>
       </td>
       <td>{{ order.prestaType }}</td>
       <td>{{ order.client }}</td>
